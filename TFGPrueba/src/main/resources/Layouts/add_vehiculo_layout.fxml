@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: Transparent;" stylesheets="@../estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controladores.ControladorAddVehiculo">
+
+    <children>
+      <Pane prefHeight="30.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="30.0">
+               <children>
+                  <JFXButton fx:id="bLPartes" alignment="CENTER" contentDisplay="CENTER" ripplerFill="#59c034" style="-fx-background-radius: 100px;" text="Lista de Partes">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Light" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="bAParte" alignment="CENTER" contentDisplay="CENTER" ripplerFill="#82cef2" style="-fx-background-radius: 100px;" text="Añadir Parte">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="bCSesion" alignment="CENTER" contentDisplay="CENTER" ripplerFill="#f5f5f5" style="-fx-background-color: red; -fx-background-radius: 100px;" text="Cerrar Sesión" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="-0.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow color="#e74b25" height="154.47" radius="38.17" spread="0.5" width="0.21" />
+         </effect>
+      </Pane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="600.0">
+               <StackPane.margin>
+                  <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+               </StackPane.margin>
+               <children>
+                  <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: black;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="93.0" fitWidth="84.0">
+                           <image>
+                              <Image url="@../../java/Resources/icono.png" />
+                           </image>
+                        </ImageView>
+                        <GridPane alignment="CENTER" prefHeight="488.0" prefWidth="104.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="450.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="cBMarca" prefHeight="25.0" prefWidth="484.0" promptText="Marca" style="-fx-background-color: white;" />
+                              <TextField fx:id="tFModelo" promptText="Modelo" GridPane.rowIndex="1" />
+                              <TextField fx:id="tFCV" promptText="CV" GridPane.rowIndex="3" />
+                              <TextField fx:id="tFKilometros" promptText="Kilometros" GridPane.rowIndex="4" />
+                              <TextField fx:id="tFMatricula" promptText="Matricula" GridPane.rowIndex="5" />
+                              <TextField fx:id="tFConductor" promptText="DNI de conductor" GridPane.rowIndex="6" />
+                              <JFXButton fx:id="bAñadirVehiculo" style="-fx-background-color: orange;" text="Añadir vehiculo" textFill="WHITE" GridPane.rowIndex="7" />
+                              <ComboBox fx:id="cBYear" prefHeight="25.0" prefWidth="498.0" promptText="Año" style="-fx-background-color: white;" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+    </children>
+</AnchorPane>
